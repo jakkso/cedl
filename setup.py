@@ -2,7 +2,7 @@
 
 import setuptools
 
-from settings import Config
+from downloader.settings import Config
 
 with open('README.md') as file:
     long_description = file.read()

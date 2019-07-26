@@ -4,7 +4,7 @@ import re
 import click
 import requests
 
-from settings import Config
+from downloader.settings import Config
 
 PATTERN = re.compile(r"/detail/.*/(.*)\?")
 
