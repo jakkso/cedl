@@ -7,6 +7,7 @@ import requests
 from downloader.settings import Config
 
 PATTERN = re.compile(r"/detail/.*/(.*)\?")
+BACKUP_PATTERN = re.compile(r"/detail/.*/(.*)\??")
 
 if not Config.download_directory.exists():
     Config.download_directory.mkdir(parents=True)
@@ -53,5 +54,8 @@ def extract_extension_id(url: str) -> str:
     extension_id = PATTERN.search(url)
     if extension_id:
         return extension_id.groups()[0]
-    else:
-        raise RuntimeError("Failed to extract extension ID from url!")
+    elif '?' not in url:
+        extension_id = BACKUP_PATTERN.search(url)
+        if extension_id:
+            return extension_id.groups()[0]
+    raise RuntimeError("Failed to extract extension ID from url!")
