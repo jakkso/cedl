@@ -11,3 +11,4 @@ class Config:
 
     chrome_version = "70.0"
     download_directory = pathlib.Path().home() / "bin" / "chrome-extensions"
+    version = '0.1'

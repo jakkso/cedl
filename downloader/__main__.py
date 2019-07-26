@@ -1,6 +1,11 @@
-#!/usr/bin/env python3
 """Create entry-point."""
 from downloader import downloader
 
-if __name__ == "__main__":
+
+def cedl():
+    """Create main routine."""
     downloader.run()
+
+
+if __name__ == "__main__":
+    cedl()
