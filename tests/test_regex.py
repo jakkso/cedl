@@ -18,5 +18,6 @@ class TestRegex(ut.TestCase):
         self.assertEqual(res_1, res_2)
         with self.assertRaises(RuntimeError):
             extract_extension_id(url_3)
+        self.assertEqual(res_1[0], 'amazon-assistant-for-chro')
 
 

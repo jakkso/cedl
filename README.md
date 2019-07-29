@@ -7,9 +7,9 @@ This is a simple utility program to download extensions from the Chrome WebStore
 
 
 ## Usage
-    cedl [url] [name]
+    cedl [url]
 
-Where `url` is the WebStore url for the extension that you want to download and `name` is the filename you want for the downloaded extension.
+Where `url` is the WebStore url for the extension that you want to download.
 
 Downloaded extensions are placed in `$HOME/bin/chrome-extensions`   
 
